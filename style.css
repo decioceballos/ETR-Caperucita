@@ -15,6 +15,7 @@ body {
   max-width: 950px;
   max-height: 520px;
   object-fit: cover;
+  object-position: center top;  /* Adicione esta linha */
   display: block;
   margin: auto;
   border-radius: 18px;
