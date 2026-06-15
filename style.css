@@ -1,374 +1,140 @@
-/* =============================================
-   ETR-Caperucita® — Folha de Estilos Global
-   Versão Final Refinada: Clean, Premium, Equilibrada
-   ============================================= */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caperucita® — Azeites, Cafés e Geleias de Altitude | Serra da Mantiqueira</title>
+  <meta name="description" content="Azeites Extra Virgem, cafés especiais e geleias artesanais produzidos a 1.500m de altitude na Serra da Mantiqueira. Agricultura regenerativa.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-:root {
-  --verde:        #2c5e1a;
-  --verde-escuro: #1a3d10;
-  --dourado:      #c8a951;
-  --dourado-escuro:#a68a3e;
-  --terroso:      #8b7355;
-  --bg:           #faf8f5; /* Fundo off-white quente */
-  --branco:       #ffffff;
-  --texto:        #2d2d2d;
-  --texto-claro:  #555555;
-  --sombra:       0 4px 20px rgba(0,0,0,0.06);
-  --radius:       8px;
-  --transicao:    all 0.3s ease;
-}
+  <!-- ============ NAVEGAÇÃO ============ -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">Caperucita<span>®</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="ativo">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="agricultura-regenerativa.html">Agricultura</a></li>
+      <li><a href="azeite.html">Azeites</a></li>
+      <li><a href="cafe.html">Cafés</a></li>
+      <li><a href="geleias.html">Geleias</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
 
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <!-- ============ HERO (Caminho da imagem corrigido para images/) ============ -->
+  <header class="hero">
+    <img src="images/pedra-do-bau.jpg" alt="Pedra do Baú na Serra da Mantiqueira" class="hero-img">
+    
+    <div class="hero-content">
+      <h1>Caperucita<sup style="font-size:0.5em;">®</sup></h1>
+      <p class="subtitulo">Azeites, Cafés e Geleias de Altitude</p>
+      <p class="tagline">Serra da Mantiqueira · 1.500 m · Agricultura Regenerativa</p>
+      <a href="azeite.html" class="btn btn-primary">Conheça nossos produtos</a>
+    </div>
+  </header>
 
-html { scroll-behavior: smooth; }
+  <!-- ============ INTRODUÇÃO ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>O sabor da altitude</h2>
+        <div class="divider"></div>
+        <p>
+          Na Serra da Mantiqueira, a 1.500 metros de altitude, nossas oliveiras, cafezeiros e frutíferas 
+          amadurecem lentamente. O resultado são produtos de aromas complexos, estabilidade singular 
+          e verdadeira expressão territorial.
+        </p>
+      </div>
+    </div>
+  </section>
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--bg);
-  color: var(--texto);
-  line-height: 1.7;
-  font-size: 16px;
-}
+  <!-- ============ NOSSOS PRODUTOS ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nossa Produção</h2>
+        <div class="divider"></div>
+        <p>Do solo vivo à sua mesa, com rastreabilidade total e certificação de qualidade.</p>
+      </div>
 
-img { max-width: 100%; height: auto; display: block; }
+      <div class="card-grid">
+        <!-- AZEITES -->
+        <article class="card">
+          <div class="card-img" style="display:flex;align-items:center;justify-content:center;color:var(--verde);font-size:3rem;">🫒</div>
+          <div class="card-body">
+            <p class="card-subtitle">Safra 2026</p>
+            <h3>Azeites Extra Virgem</h3>
+            <p>
+              Arbosana, Koroneiki e Blend. Colhidos e processados no mesmo dia, 
+              com certificação ASSCOLIVE/CADB e alto teor de polifenóis.
+            </p>
+            <a href="azeite.html" class="btn btn-verde">Ver azeites</a>
+          </div>
+        </article>
 
-/* TIPOGRAFIA */
-h1, h2, h3, h4 {
-  color: var(--verde);
-  line-height: 1.25;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
+        <!-- CAFÉS -->
+        <article class="card">
+          <div class="card-img" style="display:flex;align-items:center;justify-content:center;color:var(--verde);font-size:3rem;">☕</div>
+          <div class="card-body">
+            <p class="card-subtitle">Especiais de Altitude</p>
+            <h3>Cafés Torrados</h3>
+            <p>
+              Bourbon Amarelo, Obatã e outras variedades. Pontuação SCA, 
+              processos cuidadosos e torras que revelam o terroir da Mantiqueira.
+            </p>
+            <a href="cafe.html" class="btn btn-verde">Ver cafés</a>
+          </div>
+        </article>
 
-h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 0.4em; }
-h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: 0.5em; }
-h3 { font-size: 1.15rem; margin-bottom: 0.4em; }
+        <!-- GELEIAS -->
+        <article class="card">
+          <div class="card-img" style="display:flex;align-items:center;justify-content:center;color:var(--verde);font-size:3rem;">🍓</div>
+          <div class="card-body">
+            <p class="card-subtitle">Produção Artesanal</p>
+            <h3>Geleias Especiais</h3>
+            <p>
+              Feitas com frutas cultivadas em nosso sítio, sem conservantes artificiais. 
+              O acompanhamento perfeito para nossos azeites e queijos.
+            </p>
+            <a href="geleias.html" class="btn btn-verde">Ver geleias</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-p { margin-bottom: 1em; color: var(--texto-claro); }
+  <!-- ============ AGRICULTURA REGENERATIVA ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Agricultura Regenerativa</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="destaque">
+        "Não cultivamos apenas produtos — cultivamos solo vivo, microbioma ativo e biodiversidade. 
+        Zero agrotóxicos, zero adubos sintéticos. Cada frasco carrega a saúde integral do ecossistema da Mantiqueira."
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="agricultura-regenerativa.html" class="btn btn-verde">Conheça nossas práticas</a>
+      </div>
+    </div>
+  </section>
 
-a {
-  color: var(--verde);
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transicao);
-}
-a:hover { color: var(--dourado); }
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="footer">
+    <h4>Caperucita<sup style="font-size:0.7em;">®</sup></h4>
+    <p>Naide &amp; Décio Ceballos</p>
+    <p>Serra da Mantiqueira · São Bento do Sapucaí · SP · Brasil</p>
+    <p>
+      <a href="mailto:decioceballos@gmail.com">decioceballos@gmail.com</a> ·
+      <a href="tel:+5512996469846">(12) 99646-9846</a>
+    </p>
+    <div class="footer-bottom">
+      &copy; 2026 ETR-Caperucita® · Todos os direitos reservados
+    </div>
+  </footer>
 
-/* NAVEGAÇÃO - Clean e branca */
-.nav {
-  background: var(--branco);
-  border-bottom: 1px solid #e8e8e8;
-  padding: 0.9rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-brand {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--verde);
-  letter-spacing: -0.03em;
-}
-.nav-brand:hover { color: var(--dourado); text-decoration: none; }
-.nav-brand span { color: var(--dourado); }
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: var(--texto);
-  font-weight: 500;
-  font-size: 0.9rem;
-  padding: 0.3rem 0;
-  border-bottom: 2px solid transparent;
-}
-.nav-links a:hover,
-.nav-links a.ativo {
-  color: var(--verde);
-  border-bottom-color: var(--dourado);
-  text-decoration: none;
-}
-
-/* HERO - Menor e com sobreposição neutra (não verde) */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 35vh; /* BANNER MENOR */
-  max-height: 400px; /* LIMITE MÁXIMO RIGOROSO */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--branco);
-  /* Sobreposição escura neutra para destacar a foto da Pedra do Baú sem ficar verde */
-  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.7));
-  overflow: hidden;
-}
-
-.hero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%; /* Ajuste fino para enquadrar melhor a Pedra do Baú */
-  opacity: 1; /* A foto aparece por trás do gradiente escuro */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 2rem 1.5rem;
-  max-width: 700px;
-}
-
-.hero-content h1 {
-  color: var(--branco);
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-  margin-bottom: 0.2em;
-}
-
-.hero-content .subtitulo {
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  font-weight: 400;
-  margin-bottom: 0.5em;
-  opacity: 0.95;
-  color: #f0f0f0;
-}
-
-.hero-content .tagline {
-  font-size: 0.85rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--dourado);
-  margin-bottom: 1.2rem;
-  font-weight: 600;
-}
-
-/* BOTÕES */
-.btn {
-  display: inline-block;
-  padding: 0.7rem 1.6rem;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: var(--transicao);
-  cursor: pointer;
-  border: 1px solid transparent;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.btn-primary {
-  background: var(--dourado);
-  color: #1a1a1a;
-  border-color: var(--dourado);
-}
-.btn-primary:hover {
-  background: var(--dourado-escuro);
-  border-color: var(--dourado-escuro);
-  color: var(--branco);
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-
-.btn-verde {
-  background: transparent;
-  color: var(--verde);
-  border-color: var(--verde);
-}
-.btn-verde:hover {
-  background: var(--verde);
-  color: var(--branco);
-  text-decoration: none;
-}
-
-/* SEÇÕES */
-.container {
-  max-width: 1000px; /* Mais estreito para leitura elegante */
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.section {
-  padding: 3.5rem 0;
-}
-
-.section-alt {
-  background: var(--branco);
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.section-header p {
-  color: var(--texto-claro);
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.divider {
-  width: 50px;
-  height: 2px;
-  background: var(--dourado);
-  margin: 0.8rem auto;
-}
-
-/* CARDS */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  background: var(--branco);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--sombra);
-  transition: var(--transicao);
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #f0f0f0;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-  border-color: var(--dourado);
-}
-
-.card-img {
-  width: 100%;
-  height: 180px; /* Imagem do card menor */
-  object-fit: cover;
-  background: #f4f4f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-body {
-  padding: 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-body h3 {
-  color: var(--texto);
-  margin-bottom: 0.2em;
-}
-
-.card-body .card-subtitle {
-  color: var(--dourado-escuro);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.8em;
-}
-
-.card-body p {
-  color: var(--texto-claro);
-  font-size: 0.9rem;
-  flex: 1;
-  line-height: 1.6;
-}
-
-.card-body .btn {
-  margin-top: 1.2rem;
-  align-self: flex-start;
-  padding: 0.5rem 1.2rem;
-  font-size: 0.8rem;
-}
-
-/* DESTAQUE - Sem fundo verde, apenas elegante */
-.destaque {
-  background: var(--branco);
-  border-left: 3px solid var(--dourado);
-  padding: 1.5rem 2rem;
-  border-radius: 0 var(--radius) var(--radius) 0;
-  margin: 2rem 0;
-  color: var(--texto);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-}
-.destaque strong { color: var(--verde); }
-
-/* RODAPÉ */
-.footer {
-  background: #1a1a1a; /* Quase preto, muito mais elegante que verde escuro */
-  color: rgba(255,255,255,0.7);
-  padding: 3rem 1.5rem 2rem;
-  text-align: center;
-  margin-top: 4rem;
-}
-
-.footer h4 {
-  color: var(--dourado);
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-
-.footer p, .footer a {
-  color: rgba(255,255,255,0.7);
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem;
-}
-
-.footer a:hover { color: var(--dourado); }
-
-.footer-bottom {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.4);
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    text-align: center;
-    padding: 0.8rem 1rem;
-  }
-  .nav-links {
-    justify-content: center;
-    gap: 0.8rem 1.2rem;
-  }
-  .hero { 
-    min-height: 30vh; 
-    max-height: 350px;
-  }
-  .section { padding: 2.5rem 0; }
-  .card-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 480px) {
-  body { font-size: 15px; }
-  .nav-links { gap: 0.6rem 0.8rem; font-size: 0.85rem; }
-  .btn { padding: 0.6rem 1.2rem; font-size: 0.85rem; }
-  .hero-content h1 { font-size: 1.6rem; }
-}
+</body>
+</html>
