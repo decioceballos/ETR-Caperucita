@@ -1,28 +1,23 @@
 /* =============================================
    ETR-Caperucita® — Folha de Estilos Global
-   Paleta: Verde #2c5e1a | Dourado #c8a951
-   Tipografia: sistema (sem dependências externas)
+   Versão Revisada — Layout equilibrado
    ============================================= */
 
-/* ---------- VARIÁVEIS DA MARCA ---------- */
 :root {
   --verde:        #2c5e1a;
   --verde-escuro: #1a3d10;
   --verde-claro:  #e8f0e4;
   --dourado:      #c8a951;
   --dourado-escuro:#a68a3e;
-  --terracota:    #8b6914;
   --bg:           #faf8f5;
   --branco:       #ffffff;
   --texto:        #2d2d2d;
   --texto-claro:  #666666;
   --sombra:       0 2px 16px rgba(0,0,0,0.08);
-  --sombra-forte: 0 4px 24px rgba(0,0,0,0.12);
   --radius:       12px;
   --transicao:    all 0.3s ease;
 }
 
-/* ---------- RESET & BASE ---------- */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -38,23 +33,22 @@ body {
   color: var(--texto);
   line-height: 1.7;
   font-size: 17px;
-  -webkit-font-smoothing: antialiased;
 }
 
 img { max-width: 100%; height: auto; display: block; }
 
-/* ---------- TIPOGRAFIA ---------- */
+/* TIPOGRAFIA */
 h1, h2, h3, h4 {
   color: var(--verde);
   line-height: 1.3;
   font-weight: 700;
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 0.5em; }
-h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom: 0.6em; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5em; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin-bottom: 0.6em; }
 h3 { font-size: 1.3rem; margin-bottom: 0.4em; }
 
-p  { margin-bottom: 1em; color: var(--texto); }
+p { margin-bottom: 1em; }
 
 a {
   color: var(--verde);
@@ -62,13 +56,13 @@ a {
   font-weight: 600;
   transition: var(--transicao);
 }
-a:hover { color: var(--dourado-escuro); text-decoration: underline; }
+a:hover { color: var(--dourado-escuro); }
 
-/* ---------- NAVEGAÇÃO ---------- */
+/* NAVEGAÇÃO — Mais compacta */
 .nav {
-  background: var(--verde-escuro);
-  color: var(--branco);
-  padding: 0.9rem 2rem;
+  background: var(--branco);
+  border-bottom: 2px solid var(--verde-claro);
+  padding: 0.8rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,14 +71,13 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .nav-brand {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--branco);
-  letter-spacing: 0.5px;
+  color: var(--verde);
 }
 .nav-brand:hover { color: var(--dourado); text-decoration: none; }
 .nav-brand span { color: var(--dourado); }
@@ -92,36 +85,36 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.6rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
 .nav-links a {
-  color: var(--branco);
+  color: var(--texto);
   font-weight: 500;
   font-size: 0.95rem;
   padding: 0.3rem 0;
   border-bottom: 2px solid transparent;
-  transition: var(--transicao);
 }
 .nav-links a:hover,
 .nav-links a.ativo {
-  color: var(--dourado);
+  color: var(--verde);
   border-bottom-color: var(--dourado);
   text-decoration: none;
 }
 
-/* ---------- HERO ---------- */
+/* HERO — REDUZIDO E EQUILIBRADO */
 .hero {
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  min-height: 50vh; /* Reduzido de 70vh para 50vh */
+  max-height: 600px; /* Limite máximo */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--branco);
-  background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde) 100%);
+  background: linear-gradient(135deg, rgba(44,94,26,0.85) 0%, rgba(26,61,16,0.75) 100%);
   overflow: hidden;
 }
 
@@ -131,45 +124,45 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
+  opacity: 0.25; /* Reduzido de 0.35 para menos dominância */
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 3rem 1.5rem;
-  max-width: 800px;
+  padding: 2rem 1.5rem;
+  max-width: 700px;
 }
 
 .hero-content h1 {
   color: var(--branco);
-  font-size: clamp(2.4rem, 6vw, 4rem);
-  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
   margin-bottom: 0.3em;
 }
 
 .hero-content .subtitulo {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 300;
   margin-bottom: 0.5em;
   opacity: 0.95;
 }
 
 .hero-content .tagline {
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--dourado);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* ---------- BOTÕES ---------- */
+/* BOTÕES */
 .btn {
   display: inline-block;
-  padding: 0.85rem 2rem;
+  padding: 0.75rem 1.8rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-decoration: none;
   transition: var(--transicao);
   cursor: pointer;
@@ -187,18 +180,6 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
   color: var(--branco);
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(200,169,81,0.3);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--branco);
-  border-color: var(--branco);
-}
-.btn-outline:hover {
-  background: var(--branco);
-  color: var(--verde-escuro);
-  text-decoration: none;
 }
 
 .btn-verde {
@@ -213,7 +194,7 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
   text-decoration: none;
 }
 
-/* ---------- SEÇÕES ---------- */
+/* SEÇÕES */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -221,7 +202,7 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 3rem 0; /* Reduzido de 4rem */
 }
 
 .section-alt {
@@ -230,12 +211,12 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
 
 .section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .section-header p {
   color: var(--texto-claro);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   max-width: 650px;
   margin: 0 auto;
 }
@@ -248,11 +229,11 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
   border-radius: 2px;
 }
 
-/* ---------- GRID DE CARDS ---------- */
+/* CARDS */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.8rem;
   margin-top: 2rem;
 }
 
@@ -264,22 +245,26 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
   transition: var(--transicao);
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--verde-claro);
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--sombra-forte);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 
 .card-img {
   width: 100%;
-  height: 220px;
+  height: 200px; /* Reduzido de 220px */
   object-fit: cover;
   background: var(--verde-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 1.3rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -288,79 +273,49 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
 .card-body h3 {
   color: var(--verde);
   margin-bottom: 0.3em;
+  font-size: 1.2rem;
 }
 
 .card-body .card-subtitle {
   color: var(--dourado-escuro);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.6em;
 }
 
 .card-body p {
   color: var(--texto-claro);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   flex: 1;
 }
 
 .card-body .btn {
-  margin-top: 1.2rem;
+  margin-top: 1rem;
   align-self: flex-start;
-  padding: 0.6rem 1.4rem;
-  font-size: 0.9rem;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.88rem;
 }
 
-/* ---------- DESTAQUE / CITAÇÃO ---------- */
+/* DESTAQUE */
 .destaque {
   background: var(--verde-claro);
   border-left: 4px solid var(--verde);
-  padding: 1.5rem 2rem;
+  padding: 1.3rem 1.8rem;
   border-radius: 0 var(--radius) var(--radius) 0;
   margin: 2rem 0;
   font-style: italic;
   color: var(--verde-escuro);
 }
 
-/* ---------- PERFIL SENSORIAL (barras) ---------- */
-.perfil {
-  margin: 1.5rem 0;
-}
-
-.perfil-item {
-  margin-bottom: 0.8rem;
-}
-
-.perfil-item span {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--texto);
-  margin-bottom: 0.3rem;
-}
-
-.perfil-bar {
-  height: 8px;
-  background: var(--verde-claro);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.perfil-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--verde), var(--dourado));
-  border-radius: 4px;
-  transition: width 0.6s ease;
-}
-
-/* ---------- RODAPÉ ---------- */
+/* RODAPÉ */
 .footer {
   background: var(--verde-escuro);
   color: rgba(255,255,255,0.85);
-  padding: 3rem 1.5rem 2rem;
+  padding: 2.5rem 1.5rem 2rem;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .footer h4 {
@@ -371,46 +326,42 @@ a:hover { color: var(--dourado-escuro); text-decoration: underline; }
 
 .footer p, .footer a {
   color: rgba(255,255,255,0.8);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   margin-bottom: 0.4rem;
 }
 
 .footer a:hover { color: var(--dourado); }
 
 .footer-bottom {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
   border-top: 1px solid rgba(255,255,255,0.15);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: rgba(255,255,255,0.5);
 }
 
-/* ---------- RESPONSIVIDADE ---------- */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
     text-align: center;
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem;
   }
   .nav-links {
     justify-content: center;
-    gap: 0.8rem 1.2rem;
+    gap: 0.7rem 1rem;
   }
-  .hero { min-height: 60vh; }
-  .section { padding: 2.5rem 0; }
+  .hero { 
+    min-height: 45vh; 
+    max-height: 500px;
+  }
+  .section { padding: 2rem 0; }
   .card-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
   body { font-size: 16px; }
-  .nav-links { gap: 0.6rem 0.9rem; font-size: 0.88rem; }
-  .btn { padding: 0.7rem 1.5rem; font-size: 0.95rem; }
-}
-
-/* ---------- IMPRESSÃO ---------- */
-@media print {
-  .nav, .btn { display: none; }
-  body { background: white; color: black; }
-  .hero { min-height: auto; background: none; color: black; }
-  .hero-img { display: none; }
+  .nav-links { gap: 0.5rem 0.8rem; font-size: 0.88rem; }
+  .btn { padding: 0.65rem 1.4rem; font-size: 0.9rem; }
+  .hero-content h1 { font-size: 1.8rem; }
 }
