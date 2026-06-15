@@ -1,50 +1,145 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <title>ETR-Caperucita</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caperucita® — Azeites de Altitude & Cafés Especiais | Serra da Mantiqueira</title>
+  <meta name="description" content="Azeites Extra Virgem e cafés especiais produzidos a 1.500m de altitude na Serra da Mantiqueira. Agricultura regenerativa, solo vivo e expressão territorial.">
+  <meta name="author" content="ETR-Caperucita®">
+  <meta property="og:title" content="Caperucita® — Azeites de Altitude">
+  <meta property="og:description" content="EVOO e cafés especiais da Serra da Mantiqueira. Agricultura regenerativa a 1.500m.">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<img src="images/pedra-do-bau.jpg" class="hero">
+  <!-- ============ NAVEGAÇÃO ============ -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">Caperucita<span>®</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="ativo">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="agricultura-regenerativa.html">Agricultura</a></li>
+      <li><a href="azeite.html">Azeites</a></li>
+      <li><a href="cafes-especiais.html">Cafés</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
 
-<h1>ETR-Caperucita®</h1>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <!-- Substitua por img/hero-mantiqueira.jpg quando disponível -->
+    <!-- <img src="img/hero-mantiqueira.jpg" alt="Serra da Mantiqueira" class="hero-img"> -->
+    <div class="hero-content">
+      <h1>Caperucita<sup style="font-size:0.5em;">®</sup></h1>
+      <p class="subtitulo">Azeites Extra Virgem &amp; Cafés Especiais de Altitude</p>
+      <p class="tagline">Serra da Mantiqueira · 1.500 m · Agricultura Regenerativa</p>
+      <a href="azeite.html" class="btn btn-primary">Conheça nossos azeites</a>
+    </div>
+  </header>
 
-<p>
-Azeites de altitude produzidos na Serra da Mantiqueira a 1.500 metros.
-Agricultura regenerativa, biodiversidade preservada e expressão territorial.
-</p>
-<div class="card">
+  <!-- ============ INTRODUÇÃO ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>O sabor da altitude</h2>
+        <div class="divider"></div>
+        <p>
+          Na Serra da Mantiqueira, a 1.500 metros de altitude, nossas oliveiras e cafezeiros
+          amadurecem lentamente sob noites frias e dias intensos. O resultado são azeites e
+          cafés de aromas complexos, estabilidade singular e verdadeira expressão territorial.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<h2>Azeites Safra 2026</h2>
+  <!-- ============ AZEITES SAFRA 2026 ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Azeites Safra 2026</h2>
+        <div class="divider"></div>
+        <p>Três expressões de um mesmo terroir. Colhidos e processados no mesmo dia.</p>
+      </div>
 
-<ul>
-  <li>
-    <a href="azeites-2026/arbosana.html">
-      Arbosana 2026
-    </a>
-  </li>
+      <div class="card-grid">
+        <!-- ARBOSANA -->
+        <article class="card">
+          <!-- <img src="img/azeite-arbosana.jpg" alt="Azeite Arbosana" class="card-img"> -->
+          <div class="card-img" style="display:flex;align-items:center;justify-content:center;color:var(--verde);font-size:3rem;">🫒</div>
+          <div class="card-body">
+            <p class="card-subtitle">Perfil Suave</p>
+            <h3>Arbosana 2026</h3>
+            <p>
+              Delicado e frutado, com notas de ervas frescas e amêndoa verde.
+              Ideal para peixes, massas e finalizações sutis.
+            </p>
+            <a href="azeite-arbosana.html" class="btn btn-verde">Ver perfil</a>
+          </div>
+        </article>
 
-  <li>
-    <a href="azeites-2026/koroneiki.html">
-      Koroneiki 2026
-    </a>
-  </li>
+        <!-- KORONEIKI -->
+        <article class="card">
+          <div class="card-img" style="display:flex;align-items:center;justify-content:center;color:var(--verde);font-size:3rem;">🌿</div>
+          <div class="card-body">
+            <p class="card-subtitle">Perfil Intenso</p>
+            <h3>Koroneiki 2026</h3>
+            <p>
+              Robusto e picante, rico em polifenóis. Notas de alcachofra,
+              rúcula e tomate verde. Alta estabilidade oxidativa.
+            </p>
+            <a href="azeite-koroneiki.html" class="btn btn-verde">Ver perfil</a>
+          </div>
+        </article>
 
-  <li>
-    <a href="azeites-2026/blend.html">
-      Blend Mantiqueira 2026
-      </a>
-  </li>
-</ul>
+        <!-- BLEND -->
+        <article class="card">
+          <div class="card-img" style="display:flex;align-items:center;justify-content:center;color:var(--verde);font-size:3rem;">✨</div>
+          <div class="card-body">
+            <p class="card-subtitle">Perfil Equilibrado</p>
+            <h3>Blend Mantiqueira 2026</h3>
+            <p>
+              60% Koroneiki + 40% Arbosana. Equilíbrio entre frutado,
+              amargo e picante. Versátil para todas as ocasiões.
+            </p>
+            <a href="azeite-blend.html" class="btn btn-verde">Ver perfil</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- ============ AGRICULTURA REGENERATIVA ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Agricultura Regenerativa</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="destaque">
+        "Não cultivamos apenas oliveiras e cafés — cultivamos solo vivo,
+        microbioma ativo e biodiversidade. Zero agrotóxicos, zero adubos sintéticos.
+        Cada garrafa carrega a saúde integral do ecossistema da Mantiqueira."
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="agricultura-regenerativa.html" class="btn btn-verde">Conheça nossas práticas</a>
+      </div>
+    </div>
+  </section>
 
-<div class="footer">
-Naide Ceballos • Serra da Mantiqueira • Brasil
- (Vendas: (12) 99646 -9846)
-</div>
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="footer">
+    <h4>Caperucita<sup style="font-size:0.7em;">®</sup></h4>
+    <p>Naide &amp; Décio Ceballos</p>
+    <p>Serra da Mantiqueira · São Bento do Sapucaí · SP · Brasil</p>
+    <p>
+      <a href="mailto:decioceballos@gmail.com">decioceballos@gmail.com</a> ·
+      <a href="tel:+5512996469846">(12) 99646-9846</a>
+    </p>
+    <div class="footer-bottom">
+      &copy; 2026 ETR-Caperucita® · Todos os direitos reservados
+    </div>
+  </footer>
 
 </body>
 </html>
